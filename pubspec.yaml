@@ -1,0 +1,83 @@
+name: last_version_test
+description: "A delivery and accounting application for stores"
+publish_to: 'none'
+version: 2.2.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Storage
+  shared_preferences: ^2.2.2
+
+  # Barcode Scanner (7.x has much more mature Web camera support: native
+  # BarcodeDetector API + zxing-wasm fallback, plus many web bug fixes)
+  mobile_scanner: ^7.4.1
+
+  # File Picker for Excel/PDF
+  file_picker: ^8.0.0
+
+  # Excel import/export
+  excel: ^2.0.0
+
+  # URL Launcher for email
+  url_launcher: ^6.2.1
+
+  # HTTP requests (works on mobile AND web, unlike dart:io HttpClient)
+  http: ^1.2.0
+
+  # Persian date formatting
+  intl: ^0.19.0
+
+  # PDF generation
+  pdf: ^3.10.7
+  arabic_reshaper: ^0.0.1
+
+  # Printing and sharing PDF
+  printing: ^5.11.1
+
+  # Share files
+  share_plus: ^7.2.2
+
+  # Android & iOS notifications (v22+ also adds Web support)
+  flutter_local_notifications: ^22.0.0
+
+  # Timezone support
+  timezone: ^0.11.1
+
+  # Device timezone
+  flutter_timezone: ^3.0.1
+
+  # Application support directory
+  path_provider: ^2.1.5
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+  flutter_launcher_icons: ^0.14.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icon/
+
+  fonts:
+    - family: Vazir
+      fonts:
+        - asset: assets/fonts/Vazir.ttf
+        - asset: assets/fonts/Vazir-Bold.ttf
+          weight: 700
